@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Freddy</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body>
+    <header>
+        <h1 >
+        <img src="img/Logo.png" alt="logo de alura">
+        </h1>
+    </header>
+
+    <main>
+        <section class="contenedor">
+    
+            <div class="cuadro__ingresa__texto">
+                
+                <textarea id="input" class="texto__ingresado" rows="8"  placeholder="Ingresa el texto aqui" ></textarea>
+                
+    </div>
+            <div class="texto__restringido" >
+
+                <p class="info__text"> <span class="icono"></span>
+                <img src="img/Group.png" alt="signo__exclamacion">
+                </span>Solo letras minúsculas y sin acentos </p>
+              
+
+
+            <div class="botones">
+                <button class="boton__encriptar" onclick="mostrarEncriptado()">Encriptar</button>
+                <button class="boton__desencriptar" onclick="mostrarDesencriptado()">Desencriptar</button>
+    </div>
+            </div>
+
+            <div id="modal" class="modal-bg">
+                <div class="modal-content">
+                    <p id="modal-message">El texto contiene mayúsculas o caracteres especiales.</p>
+                    <button class="modal-button" onclick="cerrarModal()">Cerrar</button>
+                </div>
+            </div>
+    </section>
+        <section id="cuadro__texto" class="rectangulo__texto__incriptado">
+            <div class="imagen__muneco">
+                <img src="img/Muñeco.png" alt="imagen Muñeco">
+                
+            </div>
+<div class="texto">
+                <h2 class="texto__muneco">Ningun mensaje fue encontrado</h2>
+                <p class="texto__incativo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                
+            </div>
+            
+            
+</section>
+</main>
+<footer>
+   
+    <div>
+        <a href="https://github.com/FreddyMuk" target="_blank">
+            <img src="img/icons8-github-30.png" alt="github link">
+        </a>
+    </div>
+    <p>Freddy Fernadez Loria</p>
+    <div >
+        <a href="https://www.linkedin.com/" target="_blank">
+            <img src="img/icons8-linkedin-30.png" alt="linkedin link">
+        </a>
+    </div>
+</footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>

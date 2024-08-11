@@ -1,0 +1,355 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  
+    --color-primario:#0F1C2E;
+    --color-segundario:#1f2b3e;
+    --text-color:#acc2ef;
+    --color-text-boton:#cee8ff;
+    --boton-1:#1F3A5F;
+    --sombra-boton:#4d648d;
+
+
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+
+ body{
+ background: var(--color-primario);
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ gap: 0.8rem;
+ overflow: hidden;
+ justify-content: space-between;
+
+
+
+}
+header {
+    padding-top: 0.2rem;
+    max-height: 8.5%;
+}
+
+header h1{
+    width: 5%;
+
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+    padding: 0 2rem 0 2rem;
+    gap: 1rem;
+      
+}
+.contenedor{
+   
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+textarea{
+    background: var(--color-primario);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 400;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    outline: none;
+    
+}
+
+ /* Estilos para el fondo del modal */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    }
+
+    /* Estilos para el contenido del modal */
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    width: 300px;
+    text-align: center;
+    }
+
+    /* Estilos para el botón de cerrar */
+.modal-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+.modal-button:hover {
+    background-color: #0056b3;
+    }
+
+button:active{
+    letter-spacing: 3px;
+    background-color:var(--primary-200);
+    color: var(--color-text-boton);
+    box-shadow: var(--primary-200) 0px 0px 0px 0px;
+    transform: translate(10px);
+    transition: 10ms;
+    }
+    
+
+.botones{
+
+    display: flex;
+    gap: 1rem;
+   
+    }
+.boton__encriptar{
+    background: var(--color-segundario);
+    padding: 1rem 0;
+    border-radius: 15px;
+    width: 100%;
+    color: var(--color-text-boton);
+    font-family: "Inter", sans-serif ;
+    font-size: 1.1rem;  
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: #000 0 0 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    }
+
+.boton__desencriptar{
+    background:var(--color-segundario);
+    padding: 1rem 0;
+    border-radius: 15px;
+    width: 100%;
+    Color: var(--color-text-boton);
+    font-family: "Inter", sans-serif ;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: #000 0 0 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    }
+
+.boton__copiar{
+    margin:3% auto;
+    background:var(--boton-1);
+    padding: 1rem 0;
+    border-radius: 15px;
+    width: 70%;
+    Color: var(--color-text-boton);
+    font-family: "Inter", sans-serif ;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: #000 0 0 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    }
+
+.boton__copiar:hover {
+   
+    cursor: pointer;
+    color: var(--color-text-boton);
+    box-shadow: var(--primary-200) 0px 7px 29px 0px;
+    }
+
+.boton__desencriptar:hover {
+    
+    cursor: pointer;
+    color: var(--color-text-boton);
+    box-shadow: var(--sombra-boton) 0px 7px 29px 0px;
+    }
+
+.boton__encriptar:hover {
+   
+    cursor: pointer;
+    color: var(--color-text-boton);
+    box-shadow: var(--sombra-boton) 0px 7px 29px 0px;
+    }
+
+.rectangulo__texto__incriptado{
+    font-family: "Inter", sans-serif;
+    background:var(--color-segundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 33%;
+    border-radius:15px;
+    box-shadow: 0 8px 22px -8px #000;
+    line-height:120%;
+    text-align: center;
+    margin-bottom: 0.5%;
+    color: #fff;
+    }
+.cuadro__ingresa__texto{
+    height: 100%;
+   
+}
+
+.imagen__muneco{
+    height:auto;
+    width: auto;
+     }
+
+.rectangulo__texto__incriptado h2{
+    font-size: 1.7rem;
+    font-weight: bold;  
+    }
+
+.info__text{
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color:#fff;
+ 
+    
+    }
+.texto{
+    padding: 8px;
+    line-height: 24px;   
+}
+
+.cuadro__texto{
+    height: 100%;
+    
+}
+.output{
+    background-color:var(--color-segundario);
+    height: 100%;
+    border-radius: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    padding: 10px 0;
+    margin-top: auto;
+    background-color:var(--color-segundario);
+    color:var(--sombra-boton);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+p {
+margin-top: 6px;
+}
+
+@media screen and (max-width: 1024px){
+ 
+    
+    main {
+        flex-direction: column;
+    
+    }
+
+    .contenedor{
+        width: 100%;
+        height: 100%;
+      
+    }
+    .rectangulo__texto__incriptado {
+        
+        width: 100%;
+        min-height: 150px;
+        
+    }
+
+
+}
+@media screen and (min-width:768px)and (max-width: 1024px){
+
+    header h1 {
+        width: 2%;
+    }
+    
+    main {
+        flex-direction: column;
+        
+    }
+
+    .contenedor{
+        width: 100%;
+        height: 100%;
+      
+    }
+    .rectangulo__texto__incriptado {
+        width: 100%;
+        min-height: 150px;
+        
+    }
+
+      .imagen__muneco {
+
+        display: none !important;
+      }
+
+}
+
+/* ==== Mobil responsive ==== */
+
+@media screen and (max-width: 767px) {
+
+
+
+    textarea::placeholder {
+        font-size: 0.75em;
+    }
+ 
+    .rectangulo__texto__incriptado  {
+        flex-direction: column; 
+        align-items: center; 
+    }
+     .botones{
+        flex-direction: column;
+     }
+    
+     .imagen__muneco {
+        display: none !important;
+    }
+    
+    
+   
+}
+
